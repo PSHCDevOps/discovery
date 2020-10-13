@@ -285,7 +285,7 @@ jobs:
             ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
-          destination: dev-deploy-reports
+          destination: staging-deploy-reports
 
 workflows:
   version: 2
