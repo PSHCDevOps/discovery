@@ -5,4 +5,4 @@ command: celery --workdir=app --app=discovery worker --loglevel=error --concurre
 no-route: true
 health-check-type: process
 memory: 1000M
-disk_quota: 6G
+disk_quota: 5G
