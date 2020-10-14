@@ -2,4 +2,5 @@
 inherit: base-worker-manifest.yml
 
 command: scripts/init-db.sh /dev/stderr && celery --workdir=app --app=discovery beat --loglevel=info
-memory: 500M
+memory: 250M
+disk_quota: 2G
