@@ -282,10 +282,10 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
-            ./scripts/deploy-staging.sh
+            ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
-          destination: dev-deploy-reports
+          destination: staging-deploy-reports
 
 workflows:
   version: 2

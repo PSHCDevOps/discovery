@@ -5,7 +5,7 @@ from django.db import migrations
 
 
 def remove_vendors_pss(apps, scheme_editor):
-    
+
     model = apps.get_model('vendors', 'poolmembership')
     model.objects.filter(pool_id = 'PSS_382').delete()
     model.objects.filter(pool_id = 'PSS_541').delete()
@@ -20,10 +20,14 @@ def remove_vendors_pss(apps, scheme_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('vendors', '0040_auto_20181114_1525'),
+        ('vendors', '0040_auto_20181114_1525')
     ]
 
     operations = [
+        # migrations.RunSQL("UPDATE vendors_pool SET id = 'OASIS_SB_1' WHERE id = '1_SB';"),
+        # migrations.RunSQL("DELETE FROM vendors_poolmembership_Setasides WHERE poolmembership_id IN (SELECT id FROM vendors_poolmembership WHERE pool_id LIKE '%PSS%');"),
+        # migrations.RunSQL("DELETE FROM vendors_poolmembership_zones WHERE poolmembership_id IN (SELECT id FROM vendors_poolmembership WHERE pool_id LIKE '%PSS%');"),
+        # migrations.RunSQL("DELETE FROM vendors_poolmembership WHERE pool_id LIKE '%PSS%');");
     	migrations.RunPython(remove_vendors_pss)
     ]
 
