@@ -5,7 +5,7 @@ from django.db import migrations
 
 
 def remove_vendors_pss(apps, scheme_editor):
-    
+
     model = apps.get_model('vendors', 'poolmembership')
     model.objects.filter(pool_id = 'PSS_382').delete()
     model.objects.filter(pool_id = 'PSS_541').delete()
@@ -20,11 +20,11 @@ def remove_vendors_pss(apps, scheme_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('vendors', '0040_auto_20181114_1525'),
+        ('vendors', '0040_auto_20181114_1525')
     ]
 
     operations = [
-    	migrations.RunPython(remove_vendors_pss)
+       migrations.RunPython(remove_vendors_pss)
     ]
 
 
