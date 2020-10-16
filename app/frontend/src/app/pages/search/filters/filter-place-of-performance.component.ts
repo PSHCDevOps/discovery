@@ -34,7 +34,7 @@ declare let $: any;
   ]
 })
 export class FilterPlaceOfPerformanceComponent implements OnInit, OnChanges {
-  @ViewChild(FilterSelectedComponent, { static: true })
+  @ViewChild(FilterSelectedComponent)
   msgAddedItem: FilterSelectedComponent;
   items: any[] = [];
   items_filtered: any[];

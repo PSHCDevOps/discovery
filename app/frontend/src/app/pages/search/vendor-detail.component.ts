@@ -18,7 +18,6 @@ declare let API_HOST: string;
 })
 export class VendorDetailComponent implements OnInit, OnChanges {
   @ViewChild(TblContractHistoryComponent)
-  tblContractHistory: TblContractHistoryComponent;
   @Input()
   duns: string;
   @Input()
@@ -31,8 +30,7 @@ export class VendorDetailComponent implements OnInit, OnChanges {
   emitBack: EventEmitter<boolean> = new EventEmitter();
   @Output()
   emitHideSpinner: EventEmitter<boolean> = new EventEmitter();
-    // GRANT: Should be under ViewChild, testing...
-  // tblContractHistory: TblContractHistoryComponent;
+  tblContractHistory: TblContractHistoryComponent;
   error_message;
   vendor: any;
   piids_selected: any[] = [];
