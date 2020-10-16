@@ -28,3 +28,5 @@ celerybeat-schedule
 /LICENSE.md
 /README.md
 /Vagrantfile
+
+/app/frontend/node_modules/
