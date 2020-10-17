@@ -9,7 +9,7 @@
 
 The Discovery application system pulls in all available data from bundled spreadsheets and external API's.  These API's help us stay up to date with events happening in the federal contracting space related to vehicles that are followed by Discovery.  The API updates occur on a periodic basis, at least once a day, and spreadsheet data is parsed from **app/data** spreadsheets on every deployment.
 
-Currently the OASIS, HCATS, BMO, and PSS vehicles are supported but there are plans to add more vehicles in the near future.
+Currently the OASIS, HCATS, and BMO vehicles are supported but there are plans to add more vehicles in the near future.
 
 Below is a diagram representing the flow of information for the Discovery system from the various API's we fetch data from.
 

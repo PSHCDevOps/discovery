@@ -13,12 +13,10 @@ describe('Landing Page', function() {
 	var OASISvehicleLink = element(by.xpath('//h2[text()="OASIS"]'));
 	var BMOvehicleLink = element(by.xpath('//h2[text()="BMO"]'));
 	var HCATSvehicleLink = element(by.xpath('//h2[text()="HCaTS"]'));
-	var PSSvehicleLink = element(by.xpath('//h2[text()="PSS"]'));
 	var ERMvehicleLink = element(by.xpath('//h2[text()="ERM"]'));
 	var OASISvehicleLinkText = element(by.xpath('//h2[text()="OASIS"]/../p'));
 	var BMOvehicleLinkText = element(by.xpath('//h2[text()="BMO"]/../p'));
 	var HCATSvehicleLinkText = element(by.xpath('//h2[text()="HCaTS"]/../p'));
-	var PSSvehicleLinkText = element(by.xpath('//h2[text()="PSS"]/../p'));
 	var ERMvehicleLinkText = element(by.xpath('//h2[text()="ERM"]/../p'));
 	var searchButton = element(by.css('.usa-search-submit-text'));
 	var NAICSdropdown = element(by.css('[title="Choose search type"]'));
@@ -94,12 +92,10 @@ describe('Landing Page', function() {
 			 expect(OASISvehicleLink.isDisplayed()).toBe(true);
 			 expect(BMOvehicleLink.isDisplayed()).toBe(true);
 			 expect(HCATSvehicleLink.isDisplayed()).toBe(true);
-			 expect(PSSvehicleLink.isDisplayed()).toBe(true);
 			 expect(ERMvehicleLink.isDisplayed()).toBe(true);
 			 expect(OASISvehicleLinkText.getText()).toEqual('One Acquisition Solution for Integrated Service');
 			 expect(BMOvehicleLinkText.getText()).toEqual('Building Maintenance and Operations');
 			 expect(HCATSvehicleLinkText.getText()).toEqual('Human Capital and Training Solutions');
-			 expect(PSSvehicleLinkText.getText()).toEqual('Professional Services Schedule');
 			 expect(ERMvehicleLinkText.getText()).toEqual('Electronic Records Management');
 		 });
 		 
@@ -107,7 +103,6 @@ describe('Landing Page', function() {
 			 verifyLink(OASISvehicleLink, '/oasis');
 			 verifyLink(BMOvehicleLink, '/bmo');
 			 verifyLink(HCATSvehicleLink, '/hcats');
-			 verifyLink(PSSvehicleLinkText, '/pss');
 			 verifyLink(ERMvehicleLinkText, '/erm');
 		 });
 		 

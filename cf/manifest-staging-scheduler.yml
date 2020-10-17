@@ -1,0 +1,6 @@
+---
+inherit: base-scheduler-manifest.yml
+
+applications:
+- name: discovery-scheduler
+  instances: 1

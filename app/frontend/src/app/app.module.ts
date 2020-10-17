@@ -9,7 +9,6 @@ import { OasisSbInfoComponent } from './pages/contract-vehicles/oasis-sb-info.co
 import { HelpComponent } from './pages/help/help.component';
 import { BmoInfoComponent } from './pages/contract-vehicles/bmo-info.component';
 import { HcatsComponent } from './pages/contract-vehicles/hcats.component';
-import { PssComponent } from './pages/contract-vehicles/pss.component';
 import { HeroComponent } from './common/hero.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { Error404Component } from './pages/error404/error404.component';
@@ -28,7 +27,6 @@ import { ErmComponent } from './pages/contract-vehicles/erm.component';
     HelpComponent,
     BmoInfoComponent,
     HcatsComponent,
-    PssComponent,
     HeroComponent,
     ErmComponent
   ],

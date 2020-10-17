@@ -33,9 +33,6 @@ def vehicle_info(vehicle):
         },
         'bmo_sb': {
             'field_types': ('core', 'setasides', 'zones')                  
-        },
-        'pss': {
-            'field_types': ('core', 'setasides', 'zones')                  
         }
     }
     return field_map[vehicle]

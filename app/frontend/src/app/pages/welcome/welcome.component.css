@@ -18,3 +18,10 @@ a {
 .widthCustom:nth-child(1){
   margin-left: 1.0%;
 }
+
+/*custom override*/
+.align-center-custom {
+  left: 12%;
+  float: left;
+  position: relative;
+}

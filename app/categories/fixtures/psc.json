@@ -24956,6 +24956,14 @@
 },
 {
   "model": "categories.psc",
+  "pk": "R617",
+  "fields": {
+    "description": "Electronics Records Management Service",
+    "sin": []
+  }
+},
+{
+  "model": "categories.psc",
   "pk": "R699",
   "fields": {
     "description": "Other Administrative Support Services",

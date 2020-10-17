@@ -1,0 +1,7 @@
+---
+inherit: base-web-manifest.yml
+
+applications:
+- name: discovery-web
+  host: discovery-staging
+  instances: 1

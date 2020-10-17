@@ -27,6 +27,19 @@
 },
 {
   "model": "categories.vehicle",
+  "pk": "ERM",
+  "fields": {
+    "name": "Electronic Records Management",
+    "tier": 2,
+    "poc": "RecordsManagement@gsa.gov",
+    "ordering_guide": "https://www.gsa.gov/buying-selling/purchasing-programs/gsa-schedules/list-of-gsa-schedules/schedule-36imaging-document-solution/records-management-solutions",
+    "small_business": true,
+    "numeric_pool": false,
+    "display_number": false
+  }
+},
+{
+  "model": "categories.vehicle",
   "pk": "HCATS",
   "fields": {
     "name": "HCATS Unrestricted",
@@ -75,32 +88,6 @@
     "small_business": true,
     "numeric_pool": false,
     "display_number": true
-  }
-},
-{
-  "model": "categories.vehicle",
-  "pk": "PSS",
-  "fields": {
-    "name": "Professional Services Schedule",
-    "tier": 2,
-    "poc": "professionalservices@gsa.gov",
-    "ordering_guide": "https://www.gsa.gov/acquisition/products-services/professional-services/professional-services-schedule/buy-off-the-professional-services-schedule",
-    "small_business": true,
-    "numeric_pool": false,
-    "display_number": true
-  }
-},
-{
-  "model": "categories.vehicle",
-  "pk": "ERM",
-  "fields": {
-    "name": "Electronic Records Management",
-    "tier": 2,
-    "poc": "schedule36@gsa.gov",
-    "ordering_guide": "https://www.gsa.gov/buying-selling/purchasing-programs/gsa-schedules/list-of-gsa-schedules/schedule-36imaging-document-solution/records-management-solutions",
-    "small_business": true,
-    "numeric_pool": false,
-    "display_number": false
   }
 }
 ]

@@ -45,16 +45,16 @@ class KeywordTest(case.APITestCase, metaclass = case.MetaAPISchema):
                 '@range': (100, 300),
                 '@in': (43, 3, 54)
             },
-            'parent__id': {
-                'tags': ('keyword_field', 'number'),
-                '@exact': 43,
-                '@lt': 500,
-                '@lte': 500, 
-                '@gt': 500, 
-                '@gte': 500,
-                '@range': (100, 300),
-                '@in': (43, 326, 568)
-            },
+            # 'parent__id': {
+            #     'tags': ('keyword_field', 'number'),
+            #     '@exact': 43,
+            #     '@lt': 500,
+            #     '@lte': 500, 
+            #     '@gt': 500, 
+            #     '@gte': 500,
+            #     '@range': (100, 300),
+            #     '@in': (43, 326, 568)
+            # },
             'name': {
                 'tags': ('keyword_field', 'fuzzy_text'),
                 '@exact': 'Disaster Management',
@@ -83,20 +83,20 @@ class KeywordTest(case.APITestCase, metaclass = case.MetaAPISchema):
                 '@regex': '(Business|Data)\s+Analyst',
                 '@iregex': '^(business|data)'
             },
-            'sin__code': {
-                'tags': ('keyword_field', 'sin_field', 'fuzzy_text'),
-                '@exact': '736-3',
-                '@iexact': '595-10',
-                '@in': ("736-3", "520-14", "541-4G", "595-11"),
-                '@contains': '5-1',
-                '@icontains': '6-3',
-                '@startswith': '736',
-                '@istartswith': '595',
-                '@endswith': '11',
-                '@iendswith': '-3',
-                '@regex': '736\-\d+',
-                '@iregex': '\d+\-10'
-            },
+            # 'sin__code': {
+            #     'tags': ('keyword_field', 'sin_field', 'fuzzy_text'),
+            #     '@exact': '736-3',
+            #     '@iexact': '595-10',
+            #     '@in': ("736-3", "520-14", "541-4G", "595-11"),
+            #     '@contains': '5-1',
+            #     '@icontains': '6-3',
+            #     '@startswith': '736',
+            #     '@istartswith': '595',
+            #     '@endswith': '11',
+            #     '@iendswith': '-3',
+            #     '@regex': '736\-\d+',
+            #     '@iregex': '\d+\-10'
+            # },
             'naics__code': {
                 'tags': ('keyword_field', 'naics_field', 'fuzzy_text'),
                 '@exact': '611430',
@@ -125,34 +125,34 @@ class KeywordTest(case.APITestCase, metaclass = case.MetaAPISchema):
                 '@regex': '^Professional.*Training',
                 '@iregex': '^professional.*training'
             },
-            'psc__code': {
-                'tags': ('keyword_field', 'psc_field', 'fuzzy_text'),
-                '@exact': 'R699',
-                '@iexact': 'r699',
-                '@in': ("R699", "Z1DZ"),
-                '@contains': '69',
-                '@icontains': 'r69',
-                '@startswith': 'R6',
-                '@istartswith': 'r6',
-                '@endswith': '99',
-                '@iendswith': '699',
-                '@regex': 'R\d+$',
-                '@iregex': '^R(69|79)9'
-            },
-            'psc__description': {
-                'tags': ('keyword_field', 'psc_field', 'fuzzy_text'),
-                '@exact': 'Other Administrative Support Services',
-                '@iexact': 'other administrative support services',
-                '@in': ("Other Administrative Support Services", "Aircraft Components / Accessories"),
-                '@contains': 'Administrative',
-                '@icontains': 'ADMINISTRATIVE',
-                '@startswith': 'Other',
-                '@istartswith': 'other',
-                '@endswith': 'Services',
-                '@iendswith': 'services',
-                '@regex': 'Admin(istrative)?',
-                '@iregex': 'admin(istrative)?'
-            }
+            # 'psc__code': {
+            #     'tags': ('keyword_field', 'psc_field', 'fuzzy_text'),
+            #     '@exact': 'R699',
+            #     '@iexact': 'r699',
+            #     '@in': ("R699", "Z1DZ"),
+            #     '@contains': '69',
+            #     '@icontains': 'r69',
+            #     '@startswith': 'R6',
+            #     '@istartswith': 'r6',
+            #     '@endswith': '99',
+            #     '@iendswith': '699',
+            #     '@regex': 'R\d+$',
+            #     '@iregex': '^R(69|79)9'
+            # },
+            # 'psc__description': {
+            #     'tags': ('keyword_field', 'psc_field', 'fuzzy_text'),
+            #     '@exact': 'Other Administrative Support Services',
+            #     '@iexact': 'other administrative support services',
+            #     '@in': ("Other Administrative Support Services", "Aircraft Components / Accessories"),
+            #     '@contains': 'Administrative',
+            #     '@icontains': 'ADMINISTRATIVE',
+            #     '@startswith': 'Other',
+            #     '@istartswith': 'other',
+            #     '@endswith': 'Services',
+            #     '@iendswith': 'services',
+            #     '@regex': 'Admin(istrative)?',
+            #     '@iregex': 'admin(istrative)?'
+            # }
         }
     }
     

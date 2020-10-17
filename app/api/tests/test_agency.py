@@ -37,8 +37,8 @@ class AgencyTest(case.APITestCase, metaclass = case.MetaAPISchema):
             'id': {
                 'tags': ('agency_field', 'token_text'),
                 '*exact': '7001',
-                '*iexact': '97as',
-                '@in': ('8300', '97AS', '777')
+                # '*iexact': '97as',
+                # '@in': ('8300', '97AS', '777')
             },
             'name': {
                 'tags': ('agency_field', 'fuzzy_text'),

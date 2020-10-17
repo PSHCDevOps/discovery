@@ -12,7 +12,7 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
             'object': {
                 'tags': ('vendor_object',),
                 '&007901598': ('name', 'exact', 'BATTELLE MEMORIAL INSTITUTE'),
-                '&133239397': ('name', 'exact', 'MIRACLE SYSTEMS, LLC'),
+                '&001014182': ('name', 'exact', 'DYNAMICS RESEARCH CORPORATION'),
                 '&001014182': ('name', 'exact', 'DYNAMICS RESEARCH CORPORATION'),
                 '#345': (),
                 '#ABCDEFG': ()
@@ -65,38 +65,38 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
                     '@range': '074108176,196004394',
                     '@in': ('055124077', '838295400', '003184462')
                 },
-                'cage': {
-                    'tags': ('vendor_field', 'token_text'),
-                    '*exact': '3A3Q8',
-                    '*iexact': '3A3Q8',
-                    '@in': ('4L767', '4SJK4', '4U825')
-                },
+                # 'cage': {
+                #     'tags': ('vendor_field', 'token_text'),
+                #     '*exact': '3A3Q8',
+                #     '*iexact': '3A3Q8',
+                #     '@in': ('4L767', '4SJK4', '4U825')
+                # },
                 'sam_status': {
                     'tags': ('vendor_field', 'token_text'),
                     '@exact': 'ACTIVE',
                     '@iexact': 'active',
                     '@in': "ACTIVE"
                 },
-                'sam_activation_date': {
-                    'tags': ('vendor_field', 'date_time'),
-                    '@date': '2018-02-08',
-                    '@year': '2018',
-                    '@month': '2',
-                    '@day': '9',
-                    '@week': '5',
-                    '@week_day': '2',
-                    '@quarter': '1'
-                },
-                'sam_expiration_date': {
-                    'tags': ('vendor_field', 'date_time'),
-                    '@date': '2019-02-08',
-                    '@year': '2019',
-                    '@month': '2',
-                    '@day': '9',
-                    '@week': '5',
-                    '@week_day': '3',
-                    '@quarter': '1'
-                },
+                # 'sam_activation_date': {
+                #     'tags': ('vendor_field', 'date_time'),
+                #     '@date': '2018-02-08',
+                #     '@year': '2018',
+                #     '@month': '2',
+                #     '@day': '9',
+                #     '@week': '5',
+                #     '@week_day': '2',
+                #     '@quarter': '1'
+                # },
+                # 'sam_expiration_date': {
+                #     'tags': ('vendor_field', 'date_time'),
+                #     '@date': '2019-02-08',
+                #     '@year': '2019',
+                #     '@month': '2',
+                #     '@day': '9',
+                #     '@week': '5',
+                #     '@week_day': '3',
+                #     '@quarter': '1'
+                # },
                 'sam_exclusion': {
                     'tags': ('vendor_field', 'boolean'),
                     '-exact': True,
@@ -104,8 +104,8 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
                 },
                 'sam_url': {
                     'tags': ('vendor_field', 'fuzzy_text'),
-                    '@exact': 'http://www.act-corp.com',
-                    '@iexact': 'http://WWW.ACT-CORP.COM',
+                    # '@exact': 'http://www.act-corp.com',
+                    # '@iexact': 'http://WWW.ACT-CORP.COM',
                     '@in': ("http://www.sainc.com", "https://www.atlasresearch.us"),
                     '@contains': 'sys',
                     '@icontains': 'SYS',
@@ -116,20 +116,20 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
                     '@regex': '\d+',
                     '@iregex': 'www\.[^\.]+\.com'
                 },
-                'sam_location__address': {
-                    'tags': ('vendor_field', 'location_field', 'fuzzy_text'),
-                    '@exact': '7000 Muirkirk Meadows Dr',
-                    '@iexact': '7000 muirkirk meadows dr',
-                    '@in': ("1002 Explorer Blvd", "8600 Boeing Dr"),
-                    '@contains': 'South',
-                    '@icontains': 'dEErfield pOnd',
-                    '@startswith': '7500',
-                    '@istartswith': '6710 ro',
-                    '@endswith': 'Ave',
-                    '@iendswith': 'ave',
-                    '@regex': 'Ste \d+$',
-                    '@iregex': 'ste \d+$'
-                },
+                # 'sam_location__address': {
+                #     'tags': ('vendor_field', 'location_field', 'fuzzy_text'),
+                #     '@exact': '7000 Muirkirk Meadows Dr',
+                #     '@iexact': '7000 muirkirk meadows dr',
+                #     '@in': ("1002 Explorer Blvd", "8600 Boeing Dr"),
+                #     '@contains': 'South',
+                #     '@icontains': 'dEErfield pOnd',
+                #     '@startswith': '7500',
+                #     '@istartswith': '6710 ro',
+                #     '@endswith': 'Ave',
+                #     '@iendswith': 'ave',
+                #     '@regex': 'Ste \d+$',
+                #     '@iregex': 'ste \d+$'
+                # },
                 'sam_location__city': {
                     'tags': ('vendor_field', 'location_field', 'fuzzy_text'),
                     '@exact': 'Carlisle',
@@ -190,16 +190,16 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
                     '@regex': '^GS\d+',
                     '@iregex': '^(gs06|gs00)'
                 },
-                'pools__expiration_8a_date': {
-                    'tags': ('vendor_field', 'membership_field', 'date_time'),
-                    '@date': '2022-07-19',
-                    '@year': '2017',
-                    '@month': '7',
-                    '@day': '19',
-                    '@week': '32',
-                    '@week_day': '3',
-                    '@quarter': '1'
-                },
+                # 'pools__expiration_8a_date': {
+                #     'tags': ('vendor_field', 'membership_field', 'date_time'),
+                #     '@date': '2022-07-19',
+                #     '@year': '2017',
+                #     '@month': '7',
+                #     '@day': '19',
+                #     '@week': '32',
+                #     '@week_day': '3',
+                #     '@quarter': '1'
+                # },
                 'pools__pool__name': {
                     'tags': ('vendor_field', 'membership_field', 'pool_field', 'fuzzy_text'),
                     '@exact': 'Elevator Maintenance',
@@ -280,20 +280,20 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
                     '@range': (2, 5),
                     '@in': (2, 3, 5)
                 },
-                'pools__contacts__name': {
-                    'tags': ('vendor_field', 'membership_field', 'contact_field', 'fuzzy_text'),
-                    '@exact': 'Ken Scott',
-                    '@iexact': 'daniel eke',
-                    '@in': ("Ken Scott", "Daniel Eke"),
-                    '@contains': 'Taylor',
-                    '@icontains': 'taylor',
-                    '@startswith': 'Ben',
-                    '@istartswith': 'ben',
-                    '@endswith': 'Scott',
-                    '@iendswith': 'scott',
-                    '@regex': '^[A-Za-z]{4}\s+',
-                    '@iregex': '^da(n|na)'
-                },
+                # 'pools__contacts__name': {
+                #     'tags': ('vendor_field', 'membership_field', 'contact_field', 'fuzzy_text'),
+                #     '@exact': 'Ken Scott',
+                #     '@iexact': 'daniel eke', #pss contractor name
+                #     '@in': ("Ken Scott", "Daniel Eke"),
+                #     '@contains': 'Taylor',
+                #     '@icontains': 'taylor',
+                #     '@startswith': 'Ben',
+                #     '@istartswith': 'ben',
+                #     '@endswith': 'Scott',
+                #     '@iendswith': 'scott',
+                #     '@regex': '^[A-Za-z]{4}\s+',
+                #     '@iregex': '^da(n|na)'
+                # },
                 'pools__contacts__order': {
                     'tags': ('vendor_field', 'membership_field', 'contact_field', 'number'),
                     '@exact': 1,
@@ -304,25 +304,17 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
                     '@range': (1, 2),
                     '@in': (1, 2)
                 }
-            },
-            'requests': {
-                '@membership1': {
-                    'tags': ('vendor_request',),
-                    'params': {'membership': '(pool__vehicle__id=PSS)&(setasides__code=A6)&(setasides__code=XX)'},
-                    'tests': (
-                        ('pools__pool__vehicle__id', 'exact', 'PSS'),
-                        ('pools__setasides__code', 'in', ('A6', 'XX')),
-                    )
-                },
-                '-membership2': {
-                    'tags': ('vendor_request',),
-                    'params': {'membership': '(pool__vehicle__id=BMO)&(setasides__code=A6)&(setasides__code=XX)'},
-                    'tests': (
-                        ('pools__pool__vehicle__id', 'exact', 'BMO'),
-                        ('pools__setasides__code', 'in', ('A6', 'XX')),
-                    )
-                }
             }
+            # 'requests': {
+            #     '@membership1': {
+            #         'tags': ('vendor_request',),
+            #         'params': {'membership': '(pool__vehicle__id=BMO)&(setasides__code=A6)&(setasides__code=XX)'},
+            #         'tests': (
+            #             ('pools__pool__vehicle__id', 'exact', 'BMO'),
+            #             ('pools__setasides__code', 'in', ('A6', 'XX')),
+            #         )
+            #     }  
+            # }
         }
 
 
@@ -334,7 +326,7 @@ class VendorTest(case.APITestCase, metaclass = case.MetaAPISchema):
         resp.is_int(base_key + ['duns'])
         resp.is_int(base_key + ['duns_4'])
                 
-        if resp.check('is_not_in', base_key + ['duns'], ('614155380', '148815173', '831340356', '246802545')):
+        if resp.check('is_not_in', base_key + ['duns'], ('614155380', '614155380', '614155380', '614155380')):
             resp.is_not_empty(base_key + ['cage'])
             resp.is_not_empty(base_key + ['sam_status'])
             resp.is_not_none(base_key + ['sam_exclusion'])

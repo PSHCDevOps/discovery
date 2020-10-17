@@ -41,7 +41,6 @@ VEHICLES = (
     'hcats',
     'bmo_sb',
     'bmo',
-    'pss',
     'erm'
 )
 
@@ -69,7 +68,8 @@ TEMPLATE_DEBUG = False
 #
 # General configurations
 #
-SECRET_KEY = config_value('SECRET_KEY', '')
+#SECRET_KEY = config_value('SECRET_KEY', '')
+SECRET_KEY = '8lu*6g0lg)9zljagajuihk)xt)x!@SCD$i1&amp;022shmi1jcgihb*'
 APPEND_SLASH = True
 
 #

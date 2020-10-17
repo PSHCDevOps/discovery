@@ -17,7 +17,7 @@ To meet this need GSA is developing Discovery, a market research tool for Govern
 
 ## Where we're at (and where we're going)
 
-Discovery was originally developed to serve the [OASIS family of  vehicles](http://www.gsa.gov/portal/content/161367), which has many vendors capable of providing integrated professional services. Over time contracts, such as HCATS, BMO, and PSS have been added.  The Discovery application has also undergone extensive improvements under the hood, with an extended API and a new Angular based user interface that integrates with the US Web Design System.
+Discovery was originally developed to serve the [OASIS family of  vehicles](http://www.gsa.gov/portal/content/161367), which has many vendors capable of providing integrated professional services. Over time contracts, such as HCATS, and BMO have been added.  The Discovery application has also undergone extensive improvements under the hood, with an extended API and a new Angular based user interface that integrates with the US Web Design System.
 
 In the future more contracts will be added and many improvements will be made to the filtering and search capabilities of the vendors and contracts that make up the Discovery universe.
 
