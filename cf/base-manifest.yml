@@ -1,7 +1,7 @@
 ---
 path: ../
 buildpack: https://github.com/cloudfoundry/python-buildpack
-disk_quota: 2G
+disk_quota: 5G
 timeout: 180
 stack: cflinuxfs3
 services:
