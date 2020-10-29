@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * To run multiple specs at once, simply add them to a single list.
 <br> 
 ``` ['../advanced-search-page/advanced-search-page.e2e.js', '../vendors-page/vendors-page.e2e.js']```
-* Make sure you're in the proper directory, `cd frontend/configuration`, then you may Run `protractor config.js`
+* Make sure you're in the proper directory, `cd frontend/configuration`, then you may Run `protractor conf.js`
 
 Your default browser should launch, and you'll see the automated test running.  You should also see the results printed in terminal.  A Beautiful HTML report is generated in **frontend/report**, simply open the **index.html** file.  Don't check this file in.
 
