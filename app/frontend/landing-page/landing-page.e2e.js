@@ -28,7 +28,7 @@ describe('Landing Page', function() {
 	var aboutLinkFooter = element(by.xpath('//a[text()="About"]'));
 	var searchLinkFooter = element(by.xpath('//a[text()="Advanced Search"]'));
 	var contractsLinkFooter = element(by.xpath('//a[text()="Contracts"]'));
-	var contactLinkFooter = element(by.xpath('//a[text()="Contact"]'));
+	var contactLinkFooter = element(by.xpath('//a[text()="fasdigitalsupport@gsa.gov"]'));
 	var CALCLinkFooter = element(by.xpath('//a[text()="CALC"]'));
 	var AGLinkFooter = element(by.xpath('//a[text()="Acquisition Gateway "]'));
 	var ITsolutionLinkFooter = element(by.xpath('//a[text()="IT Solutions Navigator"]'));
