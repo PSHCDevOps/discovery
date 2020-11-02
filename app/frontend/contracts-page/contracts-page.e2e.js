@@ -25,7 +25,7 @@ describe('Contracts Page', function() {
 		 });
 		 
 		 it('should display all contracts on Contracts Page', function(){		
-			 expect(contracts.count()).toEqual(5);
+			 expect(contracts.count()).toEqual(4);
 			 verifyContract('OASIS','One Acquisition Solution for Integrated Service');
 			 verifyContract('BMO','Building Maintenance and Operations');
 			 verifyContract('HCaTS','Human Capital and Training Solutions');
@@ -281,7 +281,6 @@ describe('Contracts Page', function() {
 
 	
 	
-	
 	/**
 	 * Page Object and Methods
 	 */
@@ -332,8 +331,8 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_1__OASIS_1');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('44');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('45');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('200');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('55');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-3')])[1]")).getText()).toEqual('Management, Scientific, and Technical Services');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-3')])[1]")).getText()).toEqual('Management, Scientific, and Technical Services');			 
 					 browser.navigate().back();
@@ -345,8 +344,8 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_2__OASIS_2');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('40');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('25');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('36');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('34');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-2')])[1]")).getText()).toEqual('Financial and Accounting Services');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-2')])[1]")).getText()).toEqual('Financial and Accounting Services');			 
 					 browser.navigate().back();
@@ -358,8 +357,8 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_3__OASIS_3');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('43');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('43');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('162');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('49');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-4')])[1]")).getText()).toEqual('Military, Marine, and Energy Engineering');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-4')])[1]")).getText()).toEqual('Military, Marine, and Energy Engineering');			 
 					 browser.navigate().back();
@@ -371,8 +370,8 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_4__OASIS_4');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('40');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('42');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('96');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('41');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-5')])[1]")).getText()).toEqual('Scientific Research and Development');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-5')])[1]")).getText()).toEqual('Scientific Research and Development');			 
 					 browser.navigate().back();
@@ -384,7 +383,7 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_5A__OASIS_5A');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('22');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('24');
 					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('21');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-0')])[1]")).getText()).toEqual('Aircraft Parts and Engines Research and Development');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-0')])[1]")).getText()).toEqual('Aircraft Parts and Engines Research and Development');			 
@@ -397,8 +396,8 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_5B__OASIS_5B');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('22');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('21');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('26');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('22');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-6')])[1]")).getText()).toEqual('Space and Missiles Research and Development');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-6')])[1]")).getText()).toEqual('Space and Missiles Research and Development');			 
 					 browser.navigate().back();
@@ -410,8 +409,8 @@ describe('Contracts Page', function() {
 					 expect(browser.getCurrentUrl()).toContain('service_categories=OASIS_SB_6__OASIS_6');
 					 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 					 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[2]")).getText()).toContain('OASIS Unrestricted');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('41');
-					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('38');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('44');
+					 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('36');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS-1')])[1]")).getText()).toEqual('Aircraft Research and Development');
 					 expect(element(by.xpath("(//li[contains(@id,'OASIS_SB-1')])[1]")).getText()).toEqual('Aircraft Research and Development');			 
 					 browser.navigate().back();
@@ -690,7 +689,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_1');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('42');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('48');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-2')])[1]")).getText()).toEqual('Desktop Applications');			 
 			 browser.navigate().back();
 			break;
@@ -700,7 +699,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_2');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('41');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('49');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-6')])[1]")).getText()).toEqual('Electronic Messages');			 
 			 browser.navigate().back();
 			break;
@@ -710,7 +709,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_3');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('36');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('43');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-9')])[1]")).getText()).toEqual('Social Media');			 
 			 browser.navigate().back();
 			break;
@@ -720,7 +719,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_4');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('42');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('48');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-0')])[1]")).getText()).toEqual('Cloud Services');			 
 			 browser.navigate().back();
 			break;
@@ -730,7 +729,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_5');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('37');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('43');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-10')])[1]")).getText()).toEqual('Websites');			 
 			 browser.navigate().back();
 			break;
@@ -740,7 +739,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_6');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('44');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('52');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-4')])[1]")).getText()).toEqual('Digital Media (Photo)');			 
 			 browser.navigate().back();
 			break;
@@ -750,7 +749,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_7');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('40');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('48');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-3')])[1]")).getText()).toEqual('Digital Media (Audio)');			 
 			 browser.navigate().back();
 			break;
@@ -760,7 +759,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_8');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('40');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('48');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-5')])[1]")).getText()).toEqual('Digital Media (Video)');			 
 			 browser.navigate().back();
 			break;
@@ -770,7 +769,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_9');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('43');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('51');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-1')])[1]")).getText()).toEqual('Databases');			 
 			 browser.navigate().back();
 			break;
@@ -780,7 +779,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_10');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('39');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('45');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-8')])[1]")).getText()).toEqual('Shared Drives');			 
 			 browser.navigate().back();
 			break;
@@ -790,7 +789,7 @@ describe('Contracts Page', function() {
 			 browser.ignoreSynchronization = true;
 			 expect(browser.getCurrentUrl()).toContain('service_categories=ERM_11');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('41');
+			 expect(element(by.xpath("//button[@class='tooltip-bottom']")).getText()).toContain('45');
 			 expect(element(by.xpath("(//li[contains(@id,'ERM-7')])[1]")).getText()).toEqual('Engineering Drawings');			 
 			 browser.navigate().back();
 			break;
@@ -842,7 +841,7 @@ describe('Contracts Page', function() {
 	
 	verifyBMOLinks = function(){
 		var BMOlinks=['BMO Home Page', 'BMO Ordering Guide', 'BMO Training', 'BMO Contract(s)'];	
-		var BMOurls=['/building-maintenance-and-operations', '/Ordering%20Guide%20V5_0.pdf', '/bmo-training', '/fssi-bmo-faq'];
+		var BMOurls=['/building-maintenance-and-operations', '/Ordering%20Guide%20V5_0.pdf', '/bmo-training', '/bmo-faq'];
 		var j=0;
 		for(var i=0; i<BMOlinks.length; i++){	
 			element(by.xpath("//a[contains(text(),'"+BMOlinks[i]+"')]")).click();
