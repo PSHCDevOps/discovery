@@ -4,10 +4,13 @@ import 'zone.js/dist/zone-testing';
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting
+  platformBrowserDynamicTesting,
 } from '@angular/platform-browser-dynamic/testing';
 
 declare const require: any;
+
+// Add environment variables here so that tests will inject them in source code
+window['API_HOST'] = 'http://localhost:8080';
 
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
