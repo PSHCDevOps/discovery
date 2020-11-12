@@ -20,7 +20,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).  Follow the protractor test setup, you'll need to run the selenium server with their helper, webdriver-manager.
+
+* Edit the specs section, in the [configuration/config.js](configuration/conf.js) file to select the e2e tests you wish to run.  You may only want to test specific areas of the app, since it does take a few minutes to run each section.
+* To run multiple specs at once, simply add them to a single list.
+<br> 
+``` ['../advanced-search-page/advanced-search-page.e2e.js', '../vendors-page/vendors-page.e2e.js']```
+* Make sure you're in the proper directory, `cd frontend/configuration`, then you may Run `protractor conf.js`
+
+Your default browser should launch, and you'll see the automated test running.  You should also see the results printed in terminal.  A Beautiful HTML report is generated in **frontend/report**, simply open the **Discovery-Report.html** file.  You don't need to check this file in.
 
 ## Further help
 

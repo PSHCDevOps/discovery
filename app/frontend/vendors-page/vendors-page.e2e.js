@@ -67,7 +67,7 @@ describe('Vendors Page', function() {
 		 
 		 it('should display vendors table on ERM Vendors Page', function(){
 			 expect(vendorsTable.isDisplayed()).toBe(true);
-			 expect(vendorsTableRows.count()).toEqual(46);
+			 expect(vendorsTableRows.count()).toEqual(50);
 		 });
 		 
 		 it('should display footer on Vendors Page', function(){
