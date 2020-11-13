@@ -24,11 +24,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        # migrations.RunSQL("UPDATE vendors_pool SET id = 'OASIS_SB_1' WHERE id = '1_SB';"),
-        # migrations.RunSQL("DELETE FROM vendors_poolmembership_Setasides WHERE poolmembership_id IN (SELECT id FROM vendors_poolmembership WHERE pool_id LIKE '%PSS%');"),
-        # migrations.RunSQL("DELETE FROM vendors_poolmembership_zones WHERE poolmembership_id IN (SELECT id FROM vendors_poolmembership WHERE pool_id LIKE '%PSS%');"),
-        # migrations.RunSQL("DELETE FROM vendors_poolmembership WHERE pool_id LIKE '%PSS%');");
-    	migrations.RunPython(remove_vendors_pss)
+       migrations.RunPython(remove_vendors_pss)
     ]
 
 
