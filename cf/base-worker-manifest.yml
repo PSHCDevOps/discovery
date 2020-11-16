@@ -4,5 +4,5 @@ inherit: base-manifest.yml
 command: celery --workdir=app --app=discovery worker --loglevel=error --concurrency=2
 no-route: true
 health-check-type: process
-memory: 500M
-disk_quota: 5G
+memory: 1000M
+disk_quota: 6G

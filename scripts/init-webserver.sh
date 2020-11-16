@@ -30,35 +30,35 @@ python3 manage.py collectstatic --noinput >>"$LOG_FILE" 2>&1
 # Copy documentation into static folder
 #-------------------------------------------------------------------------------
 
-echo "> Navigating to $SCRIPT_DIR/../app/static"
-cd "$SCRIPT_DIR/../app/static"
+# echo "> Navigating to $SCRIPT_DIR/../app/static"
+# cd "$SCRIPT_DIR/../app/static"
 
-if [ -d "docs" ] 
-then
-    echo "> Cleaning /docs/ subdirectory"
-    rm -r "docs"
-fi
+# if [ -d "docs" ] 
+# then
+  #  echo "> Cleaning /docs/ subdirectory"
+  #  rm -r "docs"
+# fi
 
-echo "> Creating /docs/ subdirectory"
-mkdir "docs"
+# echo "> Creating /docs/ subdirectory"
+# mkdir "docs"
 
-if [ -d "discovery" ]
-then
-  echo "> Removing /discovery/ subdirectory"
-  rm -r "discovery"
-fi
+# if [ -d "discovery" ]
+# then
+  # echo "> Removing /discovery/ subdirectory"
+  # rm -r "discovery"
+# fi
 
 # Shallow clone to save space
-echo "> Cloning generated documentation"
-git clone -b $GH_PAGES_BRANCH --depth 1 --single-branch $GH_PAGES_REMOTE
+# echo "> Cloning generated documentation"
+# git clone -b $GH_PAGES_BRANCH --depth 1 --single-branch $GH_PAGES_REMOTE
 
-echo "> Copying generated index.html into $SCRIPT_DIR/../docs/templates/doc-index.html"
-cp "discovery/docs/html/index.html" "../docs/templates/doc-index.html"
-echo "> Moving generated documentation into $SCRIPT_DIR/../app/static/docs"
-mv "discovery/docs/html"/* "docs"
+# echo "> Copying generated index.html into $SCRIPT_DIR/../docs/templates/doc-index.html"
+# cp "discovery/docs/html/index.html" "../docs/templates/doc-index.html"
+# echo "> Moving generated documentation into $SCRIPT_DIR/../app/static/docs"
+# mv "discovery/docs/html"/* "docs"
 
-echo "cleaning up cloned repo"
-rm -rf "discovery"
+# echo "cleaning up cloned repo"
+# rm -rf "discovery"
 
 #-------------------------------------------------------------------------------
 
