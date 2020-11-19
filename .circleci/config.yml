@@ -291,13 +291,55 @@ workflows:
   version: 2
   test-and-deploy:
     jobs:
-      - ut-components
-      - ut-core-api
-      - ut-api-fields
-      - ut-api-values
-      - ut-frontend
-      - at-backend
-      - at-frontend
+      - ut-components:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - ut-core-api:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - ut-api-fields:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - ut-api-values:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - ut-frontend:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - at-backend:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - at-frontend:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
       - dep-dev:
           requires:
             - ut-components
