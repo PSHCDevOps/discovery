@@ -384,5 +384,3 @@ workflows:
               only:
                 - master
                 - develop
-                - docs
-                - develop-docs
