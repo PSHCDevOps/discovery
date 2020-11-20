@@ -31,3 +31,5 @@ __pycache__
 celerybeat-schedule
 
 /.idea/
+
+/scripts/cloud/uups.json

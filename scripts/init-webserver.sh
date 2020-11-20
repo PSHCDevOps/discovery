@@ -30,6 +30,11 @@ python3 manage.py collectstatic --noinput >>"$LOG_FILE" 2>&1
 # Copy documentation into static folder
 #-------------------------------------------------------------------------------
 
+SSH_KEY=$(cat VCAP_SERVICES.json | python -c 'import json,sys;print(json.load(sys.stdin)["user-provided"][0]["credentials"])')
+mkdir /ssh/ 
+cd /ssh/
+echo $SSH_KEY > id_rsa
+ssh-add .id_rsa
 # echo "> Navigating to $SCRIPT_DIR/../app/static"
 # cd "$SCRIPT_DIR/../app/static"
 
