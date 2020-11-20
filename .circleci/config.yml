@@ -73,8 +73,8 @@ discovery: &discovery
 logging: &logging
   path: logs
 
-
 jobs:
+
   ut-components:
     <<: *application
 
