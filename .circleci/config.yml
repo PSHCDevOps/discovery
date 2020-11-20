@@ -228,6 +228,7 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
+            ./scripts/deploy-static.sh
             ./scripts/deploy-dev.sh
       - store_artifacts:
           <<: *logging
@@ -246,10 +247,30 @@ jobs:
       - run:
           name: Deploy production applications
           command: |
+            ./scripts/deploy-static.sh
             ./scripts/deploy-prod.sh
       - store_artifacts:
           <<: *logging
           destination: prod-deploy-reports
+
+  dep-staging:
+    <<: *deployer
+
+    steps:
+      - run: *core
+      - checkout
+      - run: *django
+      - run: *angular
+      - run: *cloudfoundry
+
+      - run:
+          name: Deploy development applications
+          command: |
+            ./scripts/deploy-static.sh
+            ./scripts/deploy-staging.sh          
+      - store_artifacts:
+          <<: *logging
+          destination: staging-deploy-reports
 
   dep-docs:
     <<: *deployer
@@ -282,6 +303,7 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
+            ./scripts/deploy-static.sh
             ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
