@@ -30,7 +30,6 @@ deployer: &deployer
 
   working_directory: /var/local
 
-
 core: &core
   name: Install development tools
   command: |
