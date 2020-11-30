@@ -362,7 +362,7 @@ workflows:
             - ut-frontend
             - at-backend
             - at-frontend
-            - deploy-docs
+            - dep-docs
           filters:
             branches:
               only: develop
@@ -375,7 +375,7 @@ workflows:
             - ut-frontend
             - at-backend
             - at-frontend
-            - deploy-docs
+            - dep-docs
           filters:
             branches:
               only: master
