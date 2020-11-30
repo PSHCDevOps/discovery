@@ -1,5 +1,3 @@
-set -e
-
 SCRIPT_DIR="$(cd "$(dirname "$([ `readlink "$0"` ] && echo "`readlink "$0"`" || echo "$0")")"; pwd -P)"
 GH_PAGES_BRANCH="gh-pages"
 GH_PAGES_REMOTE="https://github.com/PSHCDevOps/discovery.git"
