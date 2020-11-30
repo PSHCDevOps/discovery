@@ -30,6 +30,7 @@ deployer: &deployer
 
   working_directory: /var/local
 
+
 core: &core
   name: Install development tools
   command: |
@@ -71,6 +72,7 @@ discovery: &discovery
     waitress-serve --expose-tracebacks --port=8080 discovery.wsgi:application
 logging: &logging
   path: logs
+
 
 jobs:
   ut-components:
@@ -208,7 +210,6 @@ jobs:
           command: |
              ./scripts/wait-for-it.sh --host="localhost" --port=8080 --timeout=300
              ./scripts/test-frontend.sh e2e /dev/stderr
-
       - store_artifacts:
           <<: *logging
           destination: angular-acceptance-reports
@@ -226,7 +227,6 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
-            ./scripts/deploy-static.sh
             ./scripts/deploy-dev.sh
       - store_artifacts:
           <<: *logging
@@ -245,30 +245,10 @@ jobs:
       - run:
           name: Deploy production applications
           command: |
-            ./scripts/deploy-static.sh
             ./scripts/deploy-prod.sh
       - store_artifacts:
           <<: *logging
           destination: prod-deploy-reports
-
-  dep-staging:
-    <<: *deployer
-
-    steps:
-      - run: *core
-      - checkout
-      - run: *django
-      - run: *angular
-      - run: *cloudfoundry
-
-      - run:
-          name: Deploy development applications
-          command: |
-            ./scripts/deploy-static.sh
-            ./scripts/deploy-staging.sh          
-      - store_artifacts:
-          <<: *logging
-          destination: staging-deploy-reports
 
   dep-docs:
     <<: *deployer
@@ -301,7 +281,6 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
-            ./scripts/deploy-static.sh
             ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
