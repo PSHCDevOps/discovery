@@ -359,14 +359,9 @@ workflows:
               only: develop
       - dep-prod:
           requires:
-            - ut-components
             - ut-core-api
             - ut-api-fields
             - ut-api-values
-            - ut-frontend
-            - at-backend
-            - at-frontend
-            - dep-docs
           filters:
             branches:
               only: master
