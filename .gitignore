@@ -30,6 +30,7 @@ __pycache__
 /vagrant/config.yml
 celerybeat-schedule
 
-/.idea/
-
+# cloud variables
 /scripts/cloud/uups.json
+
+/.idea/
