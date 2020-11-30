@@ -229,6 +229,7 @@ jobs:
           command: |
             git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
             git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-dev.sh
       - store_artifacts:
           <<: *logging
@@ -249,6 +250,7 @@ jobs:
           command: |
             git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
             git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-prod.sh
       - store_artifacts:
           <<: *logging
@@ -287,6 +289,7 @@ jobs:
           command: |
             git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
             git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
