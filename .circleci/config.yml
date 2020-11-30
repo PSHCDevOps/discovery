@@ -345,6 +345,14 @@ workflows:
                 - develop
                 - master
                 - staging
+      - dep-docs:
+          requires:
+            - ut-components
+          filters:
+            branches:
+              only:
+                - master
+                - develop
       - dep-dev:
           requires:
             - ut-components
@@ -383,11 +391,3 @@ workflows:
           filters:
             branches:
               only: staging
-      - dep-docs:
-          requires:
-            - ut-components
-          filters:
-            branches:
-              only:
-                - master
-                - develop
