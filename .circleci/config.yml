@@ -210,7 +210,6 @@ jobs:
           command: |
              ./scripts/wait-for-it.sh --host="localhost" --port=8080 --timeout=300
              ./scripts/test-frontend.sh e2e /dev/stderr
-
       - store_artifacts:
           <<: *logging
           destination: angular-acceptance-reports
@@ -228,6 +227,9 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
+            git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
+            git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-dev.sh
       - store_artifacts:
           <<: *logging
@@ -246,6 +248,9 @@ jobs:
       - run:
           name: Deploy production applications
           command: |
+            git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
+            git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-prod.sh
       - store_artifacts:
           <<: *logging
@@ -282,6 +287,9 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
+            git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
+            git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
@@ -302,23 +310,17 @@ workflows:
           filters:
             branches:
               only: 
-                - develop
                 - master
-                - staging
       - ut-api-fields:
           filters:
             branches:
               only: 
-                - develop
                 - master
-                - staging
       - ut-api-values:
           filters:
             branches:
               only: 
-                - develop
                 - master
-                - staging
       - ut-frontend:
           filters:
             branches:
@@ -343,9 +345,6 @@ workflows:
       - dep-dev:
           requires:
             - ut-components
-            - ut-core-api
-            - ut-api-fields
-            - ut-api-values
             - ut-frontend
             - at-backend
             - at-frontend
@@ -367,9 +366,6 @@ workflows:
       - dep-staging:
           requires:
             - ut-components
-            - ut-core-api
-            - ut-api-fields
-            - ut-api-values
             - ut-frontend
             - at-backend
             - at-frontend
