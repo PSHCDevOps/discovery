@@ -219,13 +219,12 @@ jobs:
       - run: *xvfb
       - run: *discovery
 
-      # - run:
-      #     name: Run Angular acceptance tests
-      #     no_output_timeout: 1h
-      #     command: |
-      #       ./scripts/wait-for-it.sh --host="localhost" --port=8080 --timeout=300
-      #       ./scripts/test-frontend.sh e2e /dev/stderr
-
+      - run:
+          name: Run Angular acceptance tests
+          no_output_timeout: 1h
+          command: |
+             ./scripts/wait-for-it.sh --host="localhost" --port=8080 --timeout=300
+             ./scripts/test-frontend.sh e2e /dev/stderr
       - store_artifacts:
           <<: *logging
           destination: angular-acceptance-reports
@@ -243,6 +242,9 @@ jobs:
       - run:
           name: Deploy development applications
           command: |
+            git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
+            git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-dev.sh
 
       - store_artifacts:
@@ -262,6 +264,9 @@ jobs:
       - run:
           name: Deploy production applications
           command: |
+            git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
+            git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
             ./scripts/deploy-prod.sh
 
       - store_artifacts:
@@ -283,6 +288,23 @@ jobs:
             git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
             ./scripts/deploy-docs.sh "${CIRCLE_BRANCH}"
 
+  dep-staging:
+    <<: *deployer
+
+    steps:
+      - run: *core
+      - checkout
+      - run: *django
+      - run: *angular
+      - run: *cloudfoundry
+
+      - run:
+          name: Deploy development applications
+          command: |
+            git config --global user.name "CircleCI ( ${CIRCLE_USERNAME} )"
+            git config --global user.email "${CIRCLE_USERNAME}@${CIRCLE_BRANCH}"
+            ./scripts/deploy-static.sh
+            ./scripts/deploy-staging.sh          
       - store_artifacts:
           <<: *logging
           destination: docs-deploy-reports
@@ -291,37 +313,49 @@ workflows:
   version: 2
   test-and-deploy:
     jobs:
-      - ut-components
-      - ut-core-api
-      - ut-api-fields
-      - ut-api-values
-      - ut-frontend
-      - at-backend
-      - at-frontend
-      - dep-dev:
-          requires:
-            - ut-components
-            - ut-core-api
-            - ut-api-fields
-            - ut-api-values
-            - ut-frontend
-            - at-backend
-            - at-frontend
+      - ut-components:
           filters:
             branches:
-              only: develop
-      - dep-prod:
-          requires:
-            - ut-components
-            - ut-core-api
-            - ut-api-fields
-            - ut-api-values
-            - ut-frontend
-            - at-backend
-            - at-frontend
+              only: 
+                - develop
+                - master
+                - staging
+      - ut-core-api:
           filters:
             branches:
-              only: master
+              only: 
+                - master
+      - ut-api-fields:
+          filters:
+            branches:
+              only: 
+                - master
+      - ut-api-values:
+          filters:
+            branches:
+              only: 
+                - master
+      - ut-frontend:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - at-backend:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
+      - at-frontend:
+          filters:
+            branches:
+              only: 
+                - develop
+                - master
+                - staging
       - dep-docs:
           requires:
             - ut-components
@@ -330,5 +364,30 @@ workflows:
               only:
                 - master
                 - develop
-                - docs
-                - develop-docs
+      - dep-dev:
+          requires:
+            - ut-components
+            - ut-frontend
+            - at-backend
+            - at-frontend
+            - dep-docs
+          filters:
+            branches:
+              only: develop
+      - dep-prod:
+          requires:
+            - ut-core-api
+            - ut-api-fields
+            - ut-api-values
+          filters:
+            branches:
+              only: master
+      - dep-staging:
+          requires:
+            - ut-components
+            - ut-frontend
+            - at-backend
+            - at-frontend
+          filters:
+            branches:
+              only: staging

@@ -8,8 +8,6 @@ set -e
 #-------------------------------------------------------------------------------
 
 SCRIPT_DIR="$(cd "$(dirname "$([ `readlink "$0"` ] && echo "`readlink "$0"`" || echo "$0")")"; pwd -P)"
-GH_PAGES_BRANCH="gh-pages"
-GH_PAGES_REMOTE="https://github.com/PSHCDevOps/discovery.git"
 
 #-------------------------------------------------------------------------------
 # Web server initialization
@@ -24,6 +22,9 @@ then
 fi
 
 echo "> Collecting Django static files" | tee -a "$LOG_FILE"
+<<<<<<< HEAD
+python3 manage.py collectstatic --noinput >>"$LOG_FILE" 2>&1
+=======
 python3 manage.py collectstatic --noinput >>"$LOG_FILE" 2>&1
 
 #-------------------------------------------------------------------------------
@@ -58,3 +59,4 @@ python3 manage.py collectstatic --noinput >>"$LOG_FILE" 2>&1
 
 echo "> Returning to app root directory"
 cd "$SCRIPT_DIR/../app"
+>>>>>>> master

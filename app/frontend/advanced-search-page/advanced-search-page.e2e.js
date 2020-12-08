@@ -72,15 +72,15 @@ describe('Advanced Search Page', function() {
 		 it('should display search results by Keywords 2', function(){			 
 			 browser.ignoreSynchronization = true;
 			 browser.sleep(3000);
-			 expect(browser.getCurrentUrl()).toContain('keywords=77610&vehicles=HCATS__HCATS_SB__OASIS__OASIS_SB');
+			 expect(browser.getCurrentUrl()).toContain('keywords=239&vehicles=HCATS__HCATS_SB__OASIS__OASIS_SB');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('HCATS Small Business');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[2])[1]")).getText()).toContain('HCATS Unrestricted');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[3])[1]")).getText()).toContain('OASIS Small Business');
 			 expect(element(by.xpath("//*[@id='tbl-compare']//th/following-sibling::th[4]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('36');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('44');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('44');	
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('45');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('200');	
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('55');
 			 resetButton.click();
 			 browser.sleep(3000);
 			 
@@ -107,8 +107,8 @@ describe('Advanced Search Page', function() {
 			 expect(browser.getCurrentUrl()).toContain('vehicles=OASIS__OASIS_SB&naics=541214');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[2])[1]")).getText()).toContain('OASIS Unrestricted');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('40');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('25');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('36');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('34');
 			 resetButton.click();
 			 browser.sleep(3000);
 		 });
@@ -162,7 +162,7 @@ describe('Advanced Search Page', function() {
 			 browser.sleep(3000);
 			 expect(browser.getCurrentUrl()).toContain('vehicles=ERM');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('Electronic Records Management');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('55');
 			 resetButton.click();
 			 browser.sleep(3000);
 		 });
@@ -207,22 +207,22 @@ describe('Advanced Search Page', function() {
 			 browser.sleep(3000);
 			 expect(browser.getCurrentUrl()).toContain('vehicles=OASIS_SB');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Small Business');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('158');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('406');
 			 resetButton.click();
 			 browser.sleep(3000);
 		 });
 		 
-		 it('should search by Contract Vehicle OASIS', function(){
+		 it('should search by Contract Vehicle OASIS Unrestricted', function(){
 			 var vehicle='OASIS';
 			 selectContractVehicle(vehicle);
 		 });
 		 
-		 it('should display search results by Contract Vehicle OASIS', function(){
+		 it('should display search results by Contract Vehicle OASIS Unrestricted', function(){
 			 browser.ignoreSynchronization = true;
 			 browser.sleep(3000);
 			 expect(browser.getCurrentUrl()).toContain('vehicles=OASIS');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('OASIS Unrestricted');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('77');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(3000);
 		 });
@@ -419,9 +419,9 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[3])[1]")).getText()).toContain('HCATS Small Business');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[4])[1]")).getText()).toContain('OASIS Small Business');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('7');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('2');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('3');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('15');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('30');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('39');
 			 resetButton.click();
 			 browser.sleep(3000);
 			break;
@@ -453,9 +453,9 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[3])[1]")).getText()).toContain('HCATS Small Business');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[4])[1]")).getText()).toContain('OASIS Small Business');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('50');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('40');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('44');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('63');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('158');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('406');
 			 resetButton.click();
 			 browser.sleep(3000);
 			 break;
@@ -469,7 +469,7 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[2])[1]")).getText()).toContain('Electronic Records Management');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[3])[1]")).getText()).toContain('HCATS Small Business');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('31');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('18');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('20');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('12');
 			 resetButton.click();
 			 browser.sleep(3000);
@@ -487,7 +487,7 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('10');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('5');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('13');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('30');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('78');
 			 resetButton.click();
 			 browser.sleep(3000);
 			 break;
@@ -499,8 +499,10 @@ describe('Advanced Search Page', function() {
 			 expect(browser.getCurrentUrl()).toContain('setasides=VIP');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[1])[1]")).getText()).toContain('BMO Small Business');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[2])[1]")).getText()).toContain('Electronic Records Management');
+			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[3])[1]")).getText()).toContain('OASIS Small Business');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('9');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('6');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('7');
 			 resetButton.click();
 			 browser.sleep(3000);
 			 break;
@@ -517,7 +519,7 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('10');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('9');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('18');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('30');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('25');
 			 resetButton.click();
 			 browser.sleep(3000);
 			 break;
@@ -532,9 +534,9 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[3])[1]")).getText()).toContain('HCATS Small Business');
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[4])[1]")).getText()).toContain('OASIS Small Business');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('14');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('13');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('14');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('25');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('29');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('100');
 			 resetButton.click();
 			 browser.sleep(3000);
 			 break;
@@ -564,11 +566,11 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[7])[1]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('40');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('9');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('54');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('63');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[5]")).getText()).toContain('49');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('158');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('75');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('406');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(5000);
 			break;
@@ -590,11 +592,11 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[7])[1]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('17');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('7');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('54');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('63');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[5]")).getText()).toContain('49');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('158');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('75');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('406');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(5000);
 			break;
@@ -615,11 +617,11 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[7])[1]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('24');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('8');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('54');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('63');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[5]")).getText()).toContain('49');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('158');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('75');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('406');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(5000);
 			break;
@@ -640,11 +642,11 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[7])[1]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('23');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('8');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('54');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('63');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[5]")).getText()).toContain('49');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('158');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('75');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('406');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(5000);
 			break;
@@ -665,11 +667,11 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[7])[1]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('20');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('7');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('54');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('63');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[5]")).getText()).toContain('49');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('158');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('75');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('406');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(5000);
 			break;
@@ -690,11 +692,11 @@ describe('Advanced Search Page', function() {
 			 expect(element(by.xpath("(//*[@id='tbl-compare']//th/following-sibling::th[7])[1]")).getText()).toContain('OASIS Unrestricted');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[1]")).getText()).toContain('17');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[2]")).getText()).toContain('6');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('46');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[3]")).getText()).toContain('54');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[4]")).getText()).toContain('63');
 			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[5]")).getText()).toContain('49');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('158');
-			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('75');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[6]")).getText()).toContain('406');
+			 expect(element(by.xpath("(//button[@class='tooltip-bottom'])[7]")).getText()).toContain('96');
 			 resetButton.click();
 			 browser.sleep(5000);
 			break;
