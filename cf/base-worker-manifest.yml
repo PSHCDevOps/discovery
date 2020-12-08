@@ -1,7 +1,7 @@
 ---
 inherit: base-manifest.yml
 
-command: celery --workdir=app --app=discovery worker --loglevel=error --concurrency=2
+command: celery --workdir=app --app=discovery worker --loglevel=info --concurrency=2
 no-route: true
 health-check-type: process
 memory: 512M

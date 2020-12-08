@@ -23,3 +23,6 @@ fi
 
 echo "> Collecting Django static files" | tee -a "$LOG_FILE"
 python3 manage.py collectstatic --noinput >>"$LOG_FILE" 2>&1
+
+echo "> Returning to app root directory"
+cd "$SCRIPT_DIR/../app"

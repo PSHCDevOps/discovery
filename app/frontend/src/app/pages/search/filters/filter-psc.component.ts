@@ -18,7 +18,7 @@ declare let autocomplete: any;
   styles: []
 })
 export class FilterPscComponent implements OnInit, OnChanges {
-  @ViewChild(FilterSelectedComponent, { static: true })
+  @ViewChild(FilterSelectedComponent)
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[];
