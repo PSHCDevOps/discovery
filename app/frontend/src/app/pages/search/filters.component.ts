@@ -28,29 +28,29 @@ import { FilterPlaceOfPerformanceComponent } from './filters/filter-place-of-per
 })
 export class FiltersComponent implements OnInit {
   /** START Define filter components */
-  @ViewChild(FilterContractVehiclesComponent, { static: true })
+  @ViewChild(FilterContractVehiclesComponent)
   filterContractVehiclesComponent: FilterContractVehiclesComponent;
-  @ViewChild(FilterSbdComponent, { static: true })
+  @ViewChild(FilterSbdComponent)
   filterSbdComponent: FilterSbdComponent;
-  @ViewChild(FilterKeywordsComponent, { static: true })
+  @ViewChild(FilterKeywordsComponent)
   filterKeywordsComponent: FilterKeywordsComponent;
-  @ViewChild(FilterNaicsComponent, { static: true })
+  @ViewChild(FilterNaicsComponent)
   filterNaicsComponent: FilterNaicsComponent;
-  @ViewChild(FilterServiceCategoriesComponent, { static: true })
+  @ViewChild(FilterServiceCategoriesComponent)
   filterServiceCategories: FilterServiceCategoriesComponent;
   @ViewChild(FilterCertificationsComponent)
   filterCertifications: FilterCertificationsComponent;
   @ViewChild(FilterContractPricingTypeComponent)
   filterContractPricing: FilterContractPricingTypeComponent;
-  @ViewChild(FilterContractObligatedAmountComponent, { static: true })
+  @ViewChild(FilterContractObligatedAmountComponent)
   filterContractObligated: FilterContractObligatedAmountComponent;
-  @ViewChild(FilterAgencyPerformanceComponent, { static: true })
+  @ViewChild(FilterAgencyPerformanceComponent)
   filterAgencyPerformance: FilterAgencyPerformanceComponent;
-  @ViewChild(FilterPscComponent, { static: true })
+  @ViewChild(FilterPscComponent)
   filterPscComponent: FilterPscComponent;
-  @ViewChild(FilterZoneComponent, { static: true })
+  @ViewChild(FilterZoneComponent)
   filterZoneComponent: FilterZoneComponent;
-  @ViewChild(FilterPlaceOfPerformanceComponent, { static: true })
+  @ViewChild(FilterPlaceOfPerformanceComponent)
   filterPoP: FilterPlaceOfPerformanceComponent;
   filters_list: any[];
   /** END Define filter components */

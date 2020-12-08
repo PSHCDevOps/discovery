@@ -4,7 +4,6 @@
 SCRIPT_DIR="$(cd "$(dirname "$([ `readlink "$0"` ] && echo "`readlink "$0"`" || echo "$0")")"; pwd -P)"
 cd "$SCRIPT_DIR/.."
 
-
 DOCKER_USER="${1:-vagrant}"
 
 LOG_FILE="${1:-./logs/discovery-docker.log}"

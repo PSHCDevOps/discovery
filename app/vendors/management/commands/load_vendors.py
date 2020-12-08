@@ -338,14 +338,13 @@ class Command(BaseCommand):
         for name in sheets:
             try:
                 pool = re.search(r'\(\s*([0-9a-zA-Z]+)\s*\)', name, re.IGNORECASE).group(1)
-                print("Trying ", pool)
 
                 if len(pools) == 0 or pool in pools:
                     self.update_pool(vehicle, pool, wb.parse(name), options)
 
-            except Exception as e:
-                print(e)
-                #pass # Not a pool file, skip...
+            except AttributeError as e:
+                pass # Not a pool file, skip...
+
         
 
     def handle(self, *args, **options):
