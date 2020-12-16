@@ -26,7 +26,7 @@ declare let document: any;
 })
 export class FilterAgencyPerformanceComponent
   implements OnInit, OnChanges, AfterContentInit {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: false})
   msgAddedItem: FilterSelectedComponent;
   items: any[] = [];
   items_selected: any[] = [];
