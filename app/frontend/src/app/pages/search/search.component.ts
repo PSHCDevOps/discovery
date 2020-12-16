@@ -20,9 +20,9 @@ declare const $: any;
 export class SearchComponent implements OnInit {
   @Input()
   selected_filters: any[];
-  @ViewChild(ActiveFiltersComponent, {static: false})
+  @ViewChild(ActiveFiltersComponent)
   activeFiltersComponent: ActiveFiltersComponent;
-  @ViewChild(FiltersComponent, {static: false})
+  @ViewChild(FiltersComponent)
   filtersComponent: FiltersComponent;
 
   vw_contracts = true;

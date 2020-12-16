@@ -20,7 +20,7 @@ declare const $: any;
   styles: []
 })
 export class FilterKeywordsComponent  implements OnInit, OnChanges {
-  @ViewChild(FilterSelectedComponent, {static: false})
+  @ViewChild(FilterSelectedComponent, {static: true})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];

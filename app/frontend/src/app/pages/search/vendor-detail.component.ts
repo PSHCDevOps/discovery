@@ -17,7 +17,7 @@ declare let API_HOST: string;
   styleUrls: ['./vendor-detail.component.css']
 })
 export class VendorDetailComponent implements OnInit, OnChanges {
-  @ViewChild(TblContractHistoryComponent, {static: false})
+  @ViewChild(TblContractHistoryComponent)
   tblContractHistory: TblContractHistoryComponent;
   @Input()
   duns: string;

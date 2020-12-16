@@ -17,7 +17,7 @@ declare let $: any;
   templateUrl: './filter-contract-vehicles.component.html'
 })
 export class FilterContractVehiclesComponent implements OnInit, OnChanges {
-  @ViewChild(FilterSelectedComponent, {static: false})
+  @ViewChild(FilterSelectedComponent, {static: true})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   sharedFiltersLoaded = false;
