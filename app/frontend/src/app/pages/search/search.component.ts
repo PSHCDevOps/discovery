@@ -20,9 +20,9 @@ declare const $: any;
 export class SearchComponent implements OnInit {
   @Input()
   selected_filters: any[];
-  @ViewChild(ActiveFiltersComponent)
+  @ViewChild(ActiveFiltersComponent, {static: false})
   activeFiltersComponent: ActiveFiltersComponent;
-  @ViewChild(FiltersComponent)
+  @ViewChild(FiltersComponent, {static: false})
   filtersComponent: FiltersComponent;
 
   vw_contracts = true;
@@ -257,6 +257,7 @@ export class SearchComponent implements OnInit {
     return unique_items;
   }
   submitSelectedFilters(filters) {
+    console.log('clicked submit on search page')
     if (filters.length === 0) {
       this.filtersComponent.resetFilters();
       this.reset(true);
@@ -283,6 +284,7 @@ export class SearchComponent implements OnInit {
       .getVehiclesToCompare(this.searchService.activeFilters)
       .subscribe(
         data => {
+          console.log('received response')
           if (data['count'] === 0) {
             this.noResults();
             return;
@@ -346,6 +348,7 @@ export class SearchComponent implements OnInit {
     this.show_results = true;
     this.vendors_no_results = true;
   }
+
   setParams(filters) {
     let params = '';
     for (const filter of filters) {

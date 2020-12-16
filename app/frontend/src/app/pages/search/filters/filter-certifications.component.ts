@@ -17,7 +17,7 @@ declare let document: any;
   styles: []
 })
 export class FilterCertificationsComponent implements OnInit, AfterViewInit {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: false})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];

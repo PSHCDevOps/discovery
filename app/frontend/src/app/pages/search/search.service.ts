@@ -366,6 +366,7 @@ export class SearchService  {
     );
   }
   getVehiclesToCompare(filters: any[]): Observable<any[]> {
+    console.log('inside of getVehiclesToCompare')
     let params = '';
     for (const filter of filters) {
       if (filter['name'] === 'vehicles') {

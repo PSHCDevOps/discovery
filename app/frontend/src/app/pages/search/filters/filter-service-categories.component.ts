@@ -18,7 +18,7 @@ declare let document: any;
   styles: []
 })
 export class FilterServiceCategoriesComponent implements OnInit, OnChanges {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: false})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];

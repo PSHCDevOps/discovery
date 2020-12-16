@@ -24,7 +24,7 @@ declare let document: any;
   ]
 })
 export class FilterContractObligatedAmountComponent implements OnInit {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: false})
   msgAddedItem: FilterSelectedComponent;
   min = 0;
   max = 100000000;
