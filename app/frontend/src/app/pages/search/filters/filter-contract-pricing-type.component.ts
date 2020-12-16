@@ -16,7 +16,7 @@ declare let document: any;
   styles: []
 })
 export class FilterContractPricingTypeComponent implements OnInit {
-  @ViewChild(FilterSelectedComponent, {static: false})
+  @ViewChild(FilterSelectedComponent, {static: true})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];
