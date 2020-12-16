@@ -19,7 +19,7 @@ declare let $: any;
   styles: []
 })
 export class FilterNaicsComponent implements OnInit, OnChanges {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: true})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];

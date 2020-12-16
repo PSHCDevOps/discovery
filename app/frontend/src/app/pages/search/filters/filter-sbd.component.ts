@@ -15,7 +15,7 @@ declare let document: any;
   templateUrl: './filter-sbd.component.html'
 })
 export class FilterSbdComponent implements OnInit {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: true})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];

@@ -16,7 +16,7 @@ declare let document: any;
   styles: []
 })
 export class FilterZoneComponent implements OnInit {
-  @ViewChild(FilterSelectedComponent)
+  @ViewChild(FilterSelectedComponent, {static: true})
   msgAddedItem: FilterSelectedComponent;
   @Input()
   items: any[] = [];

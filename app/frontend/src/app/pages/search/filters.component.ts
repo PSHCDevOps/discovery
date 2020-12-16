@@ -28,29 +28,29 @@ import { FilterPlaceOfPerformanceComponent } from './filters/filter-place-of-per
 })
 export class FiltersComponent implements OnInit {
   /** START Define filter components */
-  @ViewChild(FilterContractVehiclesComponent)
+  @ViewChild(FilterContractVehiclesComponent, {static: true})
   filterContractVehiclesComponent: FilterContractVehiclesComponent;
-  @ViewChild(FilterSbdComponent)
+  @ViewChild(FilterSbdComponent, {static: true})
   filterSbdComponent: FilterSbdComponent;
-  @ViewChild(FilterKeywordsComponent)
+  @ViewChild(FilterKeywordsComponent, {static: true})
   filterKeywordsComponent: FilterKeywordsComponent;
-  @ViewChild(FilterNaicsComponent)
+  @ViewChild(FilterNaicsComponent, {static: true})
   filterNaicsComponent: FilterNaicsComponent;
-  @ViewChild(FilterServiceCategoriesComponent)
+  @ViewChild(FilterServiceCategoriesComponent, {static: true})
   filterServiceCategories: FilterServiceCategoriesComponent;
-  @ViewChild(FilterCertificationsComponent)
+  @ViewChild(FilterCertificationsComponent, {static: true})
   filterCertifications: FilterCertificationsComponent;
-  @ViewChild(FilterContractPricingTypeComponent)
+  @ViewChild(FilterContractPricingTypeComponent, {static: true})
   filterContractPricing: FilterContractPricingTypeComponent;
-  @ViewChild(FilterContractObligatedAmountComponent)
+  @ViewChild(FilterContractObligatedAmountComponent, {static: true})
   filterContractObligated: FilterContractObligatedAmountComponent;
-  @ViewChild(FilterAgencyPerformanceComponent)
+  @ViewChild(FilterAgencyPerformanceComponent, {static: true})
   filterAgencyPerformance: FilterAgencyPerformanceComponent;
-  @ViewChild(FilterPscComponent)
+  @ViewChild(FilterPscComponent, {static: true})
   filterPscComponent: FilterPscComponent;
-  @ViewChild(FilterZoneComponent)
+  @ViewChild(FilterZoneComponent, {static: true})
   filterZoneComponent: FilterZoneComponent;
-  @ViewChild(FilterPlaceOfPerformanceComponent)
+  @ViewChild(FilterPlaceOfPerformanceComponent, {static: true})
   filterPoP: FilterPlaceOfPerformanceComponent;
   filters_list: any[];
   /** END Define filter components */
@@ -199,9 +199,12 @@ export class FiltersComponent implements OnInit {
     return filters;
   }
   emmitSelectedFilters(event) {
+    console.log('emitting selected filters')
     const filters: any[] = this.getSelectedFilters();
+    console.log(filters.toString())
     if (event !== null || filters.length === 0) {
       /** Clear duns */
+      console.log('event not null or filter.length = 0')
       this.router.navigate(['/search'], {
         queryParams: { vendors: null, duns: null },
         queryParamsHandling: 'merge'
@@ -211,6 +214,7 @@ export class FiltersComponent implements OnInit {
     this.emmitFilters.emit(filters);
     this.hideFilters();
   }
+
   filterOthersByVehicles(vehicles: any[]) {
     let arr = [];
     let vehicleDiscriptions = [];
