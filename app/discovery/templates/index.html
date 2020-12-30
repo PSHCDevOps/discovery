@@ -16,14 +16,17 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+      gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
       gtag('config', '{{GA_TRACKING_ID}}');
 
       // plugins 
       gtag('require', 'urlChangeTracker', {fieldsObj: {dimension1: 'Page change'}});
       gtag('require', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
       gtag('require', 'eventTracker', {events: ['click', 'auxclick', 'contextmenu']});
-
+   
+      // the plugin referece is not defined in the new gtag scripts
+      gtag('event', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
+      gtag('event', 'eventTracker', {events: ['click', 'auxclick', 'contextmenu']});
       // dimensions
       gtag('event', 'urlChangeTracker', {fieldsObj: {dimension1: 'Page change'}});
       gtag('event', 'pageview', { dimension1: 'Page load'});
