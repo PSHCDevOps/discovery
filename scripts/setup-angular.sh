@@ -18,8 +18,8 @@ apt-get install -y build-essential curl >>"$LOG_FILE" 2>&1
 rm -rf /var/lib/apt/lists/* >>"$LOG_FILE" 2>&1
 
 echo "> Installing Node JS" | tee -a "$LOG_FILE"
-curl -sL https://deb.nodesource.com/setup_10.x | bash - >>"$LOG_FILE" 2>&1
+curl -sL https://deb.nodesource.com/setup_14.x | bash - >>"$LOG_FILE" 2>&1
 apt-get install -y nodejs >>"$LOG_FILE" 2>&1
 
 echo "> Installing Angular JS environment" | tee -a "$LOG_FILE"
-npm install -g @angular/cli@7.3.9 >>"$LOG_FILE" 2>&1
+npm install -g @angular/cli@10 >>"$LOG_FILE" 2>&1
