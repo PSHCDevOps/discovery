@@ -10,6 +10,9 @@ import { SearchService } from '../search/search.service';
         background-image: url(/frontend/assets/images/hero-generic-vehicles.jpg);
         color: #fff !important;
       }
+      .usa-media_block-margin-bottom {
+        margin-bottom: 3rem;
+      }
     `
   ]
 })
