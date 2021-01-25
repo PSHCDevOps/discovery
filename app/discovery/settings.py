@@ -397,12 +397,35 @@ REFERRER_POLICY = 'origin'
 CORS_ORIGIN_ALLOW_ALL = True
 
 CSP_DEFAULT_SRC = ("'self'", "'unsafe-eval'")
-CSP_CONNECT_SRC = ("'self'", 'api.gsa.gov', 'calc-dev.app.cloud.gov', 'localhost', 'calc.gsa.gov', 'google-analytics.com')
-CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'", "'unsafe-eval'", 'googletagmanager.com', 'ssl/google-analytics.com','google-analytics.com', 'dap.digitalgov.gov')
-CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", "fonts.googleapis.com")
-CSP_IMG_SRC = ("'self'", 'google-analytics.com')
-CSP_FONT_SRC = ("'self'", 'fonts.gstatic.com')
-CSP_OBJECT_SRC = ("'none'",)
+
+CSP_CONNECT_SRC = ("'self'", 
+                    'api.gsa.gov',
+                    'calc-dev.app.cloud.gov',
+                    'localhost',
+                    'calc.gsa.gov',
+                    "https://www.google-analytics.com")
+
+CSP_SCRIPT_SRC = ("'self'",
+                  "'unsafe-inline'",
+                  "'unsafe-eval'",
+                  "https://www.googletagmanager.com",
+                  'ssl/google-analytics.com',
+                  "https://www.google-analytics.com",
+                  "dap.digitalgov.gov")
+
+CSP_STYLE_SRC = ("'self'",
+                 "'unsafe-inline'",
+                 "fonts.googleapis.com")
+
+CSP_IMG_SRC = ("'self'",
+                "https://www.google-analytics.com")
+
+CSP_FONT_SRC = ("'self'",
+                 "https://www.fonts.gstatic.com")
+
+CSP_OBJECT_SRC = ("'none'")
+
+# CSP_INCLUDE_NONCE_IN =("script-src")
 
 
 SECURE_BROWSER_XSS_FILTER = True
