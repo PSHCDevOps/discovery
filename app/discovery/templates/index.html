@@ -9,38 +9,35 @@
     <link rel="icon" type="image/x-icon" href="{% static 'frontend/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'frontend/assets/uswds/css/uswds.min.css' %}">
     <link rel="stylesheet" href="{% static 'frontend/styles.css' %}">
-</head>
-<body>
-    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     {% if GA_TRACKING_ID %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_TRACKING_ID}}"></script>
     <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      pageUrl = window.location.href;
-      ga('create',  {
-        trackingId: '{{GA_TRACKING_ID}}',
-        cookieFlags: 'secure',
-        cookieDomain: 'auto'
-        });
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('set', {'cookie_flags': 'SameSite=None;Secure;HttpOnly'});
+      gtag('config', '{{GA_TRACKING_ID}}');
 
-      ga('require', 'urlChangeTracker', {
-        fieldsObj: {
-          dimension1: 'Page change'
-        }
-      });
-      ga('require', 'outboundLinkTracker', {
-        events: ['click', 'auxclick', 'contextmenu']
-      });
-      ga('require', 'eventTracker', {
-        events: ['click', 'auxclick', 'contextmenu']
-      });
+      // plugins 
+      // gtag('require', 'urlChangeTracker', {fieldsObj: {dimension1: 'Page change'}});
+      // gtag('require', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
+      // gtag('require', 'eventTracker', {events: ['click', 'auxclick', 'contextmenu']});
+   
+      // the plugin referece is not defined in the new gtag scripts
+      gtag('event', 'outboundLinkTracker', {events: ['click', 'auxclick', 'contextmenu']});
+      gtag('event', 'eventTracker', {events: ['click', 'auxclick', 'contextmenu']});
+      // dimensions
+      gtag('event', 'urlChangeTracker', {fieldsObj: {dimension1: 'Page change'}});
+      gtag('event', 'pageview', { dimension1: 'Page load'});
+      
 
-      ga('send', 'pageview', {
-        dimension1: 'Page load'
-      });
     </script>
     <!--<script async src="https://www.google-analytics.com/analytics.js"></script>-->
     <script async src="{% static 'frontend/assets/autotrack/autotrack.js' %}"></script>
     {% endif %}
+</head>
+<body>
     <discovery-root>Loading...</discovery-root>
 
     <script type="text/javascript">
